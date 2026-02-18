@@ -116,6 +116,10 @@ export async function POST(request: Request) {
           .insert({
             order_id: order.id,
             product_category_id: item.product_category_id,
+            
+            // ✅ เพิ่มบรรทัดนี้ครับ
+            interest_level: item.interest_level, 
+
             note: item.note,
             images: itemImageUrls 
           })
